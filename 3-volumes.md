@@ -21,7 +21,7 @@ Read-only
 named volumes:
 
     docker volume create -d flocker -o size=20GB my-named-volume
-    
+
     docker run -d -P \
       -v my-named-volume:/webapp \
       --name web training/webapp python app.py
@@ -57,13 +57,15 @@ Reach the same goal with the following volumes types:
 
   4. Named volume
      - datavolume:/var/lib/mysql
-     
+
   5. mount volumes from another container
      -  –volumes-from
-    
+
 ### Exercise 3.b Backup a volume!
- 
+
 Use the exercise 4a to backup the volume to a host folder.
-     
+
 ref:
 https://docs.docker.com/engine/tutorials/dockervolumes/
+
+    docker run --volumes-from .... tar /my-volume
