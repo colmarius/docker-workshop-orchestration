@@ -1,5 +1,5 @@
 FROM alpine:latest
 
-COPY command_wrapper.sh /
+COPY date_server.sh /
 
-CMD ["/command_wrapper.sh"]
+CMD ["/date_server.sh"]
